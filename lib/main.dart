@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sampleapp/task_one_sqlite/ProfilePage.dart';
+import 'package:sampleapp/task_four_ui_componeds/view/navigator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  ProfilePage(),
+      home:  MainNavigator(),
     );
   }
 }

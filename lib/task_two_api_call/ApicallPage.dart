@@ -111,16 +111,12 @@ class _ApicallPageState extends State<ApicallPage> {
       "body": emailController.text
     };
     final postRequestJson = jsonEncode(data);
-    /*Check Internet Connecticity*/
     print('*****postRequestJsont***** $postRequestJson');
     try {
       final result = await InternetAddress.lookup('google.com');
       if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
-        //await pr.show();
-        /*Internet Present make Login request*/
         final postResponse = await http.post(Uri.parse(url),
             headers: headers, body: postRequestJson);
-        // check the status code in response
         print("*****postResponse*****" + postResponse.body);
         Map<String, dynamic> data =
         new Map<String, dynamic>.from(json.decode(postResponse.body));
